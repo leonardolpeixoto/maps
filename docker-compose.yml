@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  maps:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: catalog
+    ports:
+      - 3000:3000
+    environment:
+      - HOST=0.0.0.0
+    volumes:
+      - .:/home/node/app
